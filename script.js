@@ -10,15 +10,20 @@ let list_picture = [
 function showImage() {
     let refList = document.getElementById('picture')
     for (let index = 0; index < list_picture.length; index++) {
-        refList.innerHTML += `<img src="./foto/${list_picture[index]}" onclick='openDialog()'>`;
+        refList.innerHTML += `<img src="./foto/${list_picture[index]}" onclick='openDialog(event)'>`;
         
     }
 }
 
 const dialogRef = document.getElementById('my_dialog')
-function openDialog(){
+function openDialog(event){
+    let srcImg = checkClick(event)
     dialogRef.showModal();
+    console.log(srcImg);
 }
 function closeDialog() {
-    dialogRef.close()
+    dialogRef.close();
+}
+function checkClick(event) { 
+    return event.target.src;
 }
