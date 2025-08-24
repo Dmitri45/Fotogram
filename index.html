@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fotogram</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./img/favicon.svg">
 </head>
 
 <body onload="showImage()">
@@ -25,21 +26,25 @@
         <img src="./img/d507876a-36ad-4ef2-9a12-9ca119e2beb8.png" alt="avatar">
         Dmitrii Schilling
     </footer>
-    <dialog id="my_dialog" onload="showImagedialog()">
-        <p id="image_name"></p>
-        <svg class="close_symbol" onclick="closeDialog()" xmlns="http://www.w3.org/2000/svg" fill="none"
-            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-        </svg>
-        <div class="arrows_symbol_container">
-            <svg xmlns="http://www.w3.org/2000/svg" class="arrow_symbol" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
-              </svg>
-              <p></p>
-              <svg xmlns="http://www.w3.org/2000/svg" class="arrow_symbol" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-              </svg>
-               
+    <dialog id="my_dialog">
+        <div class="dialog_content">
+            <p id="image_name"></p>
+            <svg class="close_symbol" onclick="closeDialog()" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+            <p id="img_dialog"></p>
+            <div class="arrows_symbol_container">
+                <svg xmlns="http://www.w3.org/2000/svg" onclick="previousImage()" class="arrow_symbol" fill="none" viewBox="0 0 24 24"
+                    stroke-width="2.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" onclick="nextImage()" class="arrow_symbol" fill="none" viewBox="0 0 24 24"
+                    stroke-width="2.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>
+
+            </div>
         </div>
     </dialog>
 </body>

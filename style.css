@@ -1,14 +1,15 @@
-body{
+body {
     font-family: 'Inter', Arial, sans-serif;
     margin: 0px;
     display: flex;
     flex-direction: column;
     height: 100vh;
     color: white;
-   
+
 
 }
-header{
+
+header {
     font-family: 'Poppins', sans-serif;
     display: flex;
     align-items: center;
@@ -19,15 +20,18 @@ header{
     padding-left: 60px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5)
 }
-.img_header{
+
+.img_header {
     height: 50px;
     width: 50px;
     margin-right: 8px;
 }
-h1{
+
+h1 {
     margin-top: 48px;
 }
-main{  
+
+main {
     flex: 1;
     display: flex;
     align-items: center;
@@ -36,21 +40,24 @@ main{
     padding-left: 60px;
     padding-right: 60px;
 }
+
 main img {
     height: 160px;
     width: 240px;
     margin-right: 32px;
     border-radius: 8px;
+    border: 1px solid #0a5c75;
     margin-bottom: 32px;
 }
-main img:hover{
+
+main img:hover {
     transform: scale(1.1);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     cursor: pointer;
 }
-    
 
-footer{
+
+footer {
     font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
@@ -61,38 +68,66 @@ footer{
     font-weight: 1000;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5)
 }
-footer img{
+
+footer img {
     height: 60px;
     width: 60px;
     margin-right: 8px;
 }
-.picture_container{
+
+.picture_container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 56px;
 }
-dialog{
+
+dialog {
     background-color: #0a5c75;
-    height: 400px;
-    width: 400px;
-    border-radius: 16px;
+    height: 560px;
+    width: 540px;
+    border-radius: 32px;
     border: none;
     outline: none;
 }
 
-.close_symbol{
+dialog img {
+    max-height: 400px;
+    max-width: 480px;
+    margin-top: 32px;
+    margin-bottom: 32px;
     position: absolute;
-    top:8px;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+dialog p {
+    color: beige;
+    font-size: 20px;
+}
+
+.dialog_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.close_symbol {
+    position: absolute;
+    top: 8px;
     right: 8px;
-    color:beige;
+    color: beige;
     height: 32px;
     width: 32px;
     border-radius: 50%;
 }
-.close_symbol:hover{
+
+.close_symbol:hover {
     background-color: rgba(245, 245, 220, 0.5);
 }
-.arrow_symbol{
+
+.arrow_symbol {
     color: #b7584e;
     background-color: rgba(190, 100, 90, 0.3);
     border-radius: 50%;
@@ -100,11 +135,13 @@ dialog{
     width: 40px;
 
 }
-.arrow_symbol:hover{
+
+.arrow_symbol:hover {
     background-color: rgba(190, 100, 90, 0.5);
     cursor: pointer;
 }
-.arrows_symbol_container{
+
+.arrows_symbol_container {
     position: absolute;
     bottom: 4px;
     left: 50%;
