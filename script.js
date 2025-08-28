@@ -17,6 +17,7 @@ function showImage() {
 
 const dialogRef = document.getElementById('my_dialog')
 function openDialog(event) {
+    toglleOverlay()
     let srcImg = checkClick(event);
     dialogRef.showModal();
     let my_img = srcImg.split("/").pop();
@@ -24,10 +25,11 @@ function openDialog(event) {
     let refDialogHeadline = document.getElementById('image_name');
     refDialogHeadline.innerText = my_img;
     let refDialogImg = document.getElementById('img_dialog');
-    refDialogImg.innerHTML = `<img src="./foto/${my_img}">`
+    refDialogImg.innerHTML = `<img src="./foto/${my_img}">`;
 
 }
 function closeDialog() {
+    toglleOverlay()
     dialogRef.close();
 }
 function checkClick(event) {
@@ -36,27 +38,34 @@ function checkClick(event) {
 
 function nextImage() {
     let indexOfImg = list_picture.indexOf(document.getElementById('image_name').innerText);
-    indexOfImg += 1
+    indexOfImg += 1;
     if (indexOfImg == list_picture.length){
-        indexOfImg = 0
+        indexOfImg = 0;
     }
     let refDialogImg = document.getElementById('img_dialog');
-    refDialogImg.innerHTML = `<img src="./foto/${list_picture[indexOfImg]}">`
+    refDialogImg.innerHTML = `<img src="./foto/${list_picture[indexOfImg]}">`;
     let refDialogHeadline = document.getElementById('image_name');
     refDialogHeadline.innerText = list_picture[indexOfImg];
 }
 
 function previousImage() {
     let indexOfImg = list_picture.indexOf(document.getElementById('image_name').innerText);
-    indexOfImg -= 1
+    indexOfImg -= 1;
     if (indexOfImg < 0){
-        indexOfImg = list_picture.length - 1
+        indexOfImg = list_picture.length - 1;
     }
     let refDialogImg = document.getElementById('img_dialog');
-    refDialogImg.innerHTML = `<img src="./foto/${list_picture[indexOfImg]}">`
+    refDialogImg.innerHTML = `<img src="./foto/${list_picture[indexOfImg]}">`;
     let refDialogHeadline = document.getElementById('image_name');
     refDialogHeadline.innerText = list_picture[indexOfImg];
 }
 
+function stopEventPropagation(event) {
+    event.stopPropagation();
+}
 
+function toglleOverlay(){
+    let overlayRef = document.getElementById('overlay');
+    overlayRef.classList.toggle('d_none');
+}
 

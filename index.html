@@ -26,7 +26,8 @@
         <img src="./img/d507876a-36ad-4ef2-9a12-9ca119e2beb8.png" alt="avatar">
         Dmitrii Schilling
     </footer>
-    <dialog id="my_dialog">
+    <div id="overlay" class="overlay d_none" onclick="toglleOverlay()">
+    <dialog id="my_dialog" onclick="stopEventPropagation(event)">
         <div class="dialog_content">
             <p id="image_name"></p>
             <svg class="close_symbol" onclick="closeDialog()" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -47,6 +48,7 @@
             </div>
         </div>
     </dialog>
+</div>
 </body>
 <script src="./script.js"></script>
 
