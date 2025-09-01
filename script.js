@@ -19,13 +19,14 @@ const dialogRef = document.getElementById('my_dialog')
 function openDialog(event) {
     toglleOverlay()
     let srcImg = checkClick(event);
-    dialogRef.showModal();
+    dialogRef.show();
     let my_img = srcImg.split("/").pop();
     console.log(my_img);
     let refDialogHeadline = document.getElementById('image_name');
     refDialogHeadline.innerText = my_img;
     let refDialogImg = document.getElementById('img_dialog');
     refDialogImg.innerHTML = `<img src="./foto/${my_img}">`;
+    slideNumber()
 
 }
 function closeDialog() {
@@ -46,6 +47,7 @@ function nextImage() {
     refDialogImg.innerHTML = `<img src="./foto/${list_picture[indexOfImg]}">`;
     let refDialogHeadline = document.getElementById('image_name');
     refDialogHeadline.innerText = list_picture[indexOfImg];
+    slideNumber()
 }
 
 function previousImage() {
@@ -58,6 +60,7 @@ function previousImage() {
     refDialogImg.innerHTML = `<img src="./foto/${list_picture[indexOfImg]}">`;
     let refDialogHeadline = document.getElementById('image_name');
     refDialogHeadline.innerText = list_picture[indexOfImg];
+    slideNumber()
 }
 
 function stopEventPropagation(event) {
@@ -67,5 +70,16 @@ function stopEventPropagation(event) {
 function toglleOverlay(){
     let overlayRef = document.getElementById('overlay');
     overlayRef.classList.toggle('d_none');
+    toggleOverflowHidden()
+}
+function toggleOverflowHidden(){
+    let bodyRef = document.getElementById('body');
+    bodyRef.classList.toggle('no_scroll');
 }
 
+function slideNumber(){
+    let indexOfImage = list_picture.indexOf(document.getElementById('image_name').innerText);
+    console.log(list_picture.indexOf(document.getElementById('image_name').innerText));
+    let slideNumberRef = document.getElementById('slide_number');
+    slideNumberRef.innerText = `${indexOfImage + 1}/${list_picture.length}`
+}

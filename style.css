@@ -1,9 +1,9 @@
 body {
     font-family: 'Inter', Arial, sans-serif;
     margin: 0px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    height: 100vh;
     color: white;
 
 
@@ -13,12 +13,20 @@ header {
     font-family: 'Poppins', sans-serif;
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: #05313f;
-    height: 80px !important;
+    min-height: 80px;
     font-size: 32px;
     font-weight: 1000;
-    padding-left: 60px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5)
+}
+
+.header_inner {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 1440px;
+    margin-left: 40px;
 }
 
 .img_header {
@@ -63,7 +71,7 @@ footer {
     justify-content: center;
     align-items: center;
     background-color: #05313f;
-    height: 80px;
+    min-height: 80px;
     font-size: 24px;
     font-weight: 1000;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5)
@@ -80,6 +88,7 @@ footer img {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 56px;
+    max-width: 1440px;
 }
 
 dialog {
@@ -89,6 +98,11 @@ dialog {
     border-radius: 32px;
     border: none;
     outline: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0px;
 }
 
 dialog img {
@@ -97,9 +111,9 @@ dialog img {
     margin-top: 32px;
     margin-bottom: 32px;
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
 dialog p {
@@ -107,23 +121,30 @@ dialog p {
     font-size: 20px;
 }
 
-.dialog_content{
+.dialog_content {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.overlay{
-    background-color: rgba(0, 0, 0, 0.301);
-    height: 100vh;
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.450);
+    height: 100%;
     width: 100%;
     top: 0;
     left: 0;
     position: absolute;
 
 }
-.d_none{
+
+.d_none {
     display: none;
 }
+
+.no_scroll {
+    overflow: hidden;
+}
+
 .close_symbol {
     position: absolute;
     top: 8px;
@@ -159,4 +180,195 @@ dialog p {
     transform: translate(-50%);
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.slide_number {
+    margin-left: 8px;
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+@media(max-width:800px) {
+    header {
+        font-size: 24px;
+        min-height: 60px;
+    }
+
+    .img_header {
+        height: 42px;
+        width: 42px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    main img {
+        height: 144px;
+        width: 224px;
+        margin-right: 24px;
+        margin-bottom: 24px;
+    }
+
+    dialog {
+        height: 480px;
+        width: 460px;
+
+    }
+
+    dialog img {
+        max-height: 320px;
+        max-width: 400px;
+        margin-top: 24px;
+        margin-bottom: 24px;
+
+    }
+    
+    dialog p{
+        font-size: 16px;
+    }
+
+    .arrow_symbol {
+        height: 32px;
+        width: 32px;
+    }
+
+
+}
+
+
+@media(max-width:560px) {
+    header {
+        font-size: 20px;
+        min-height: 54px;
+    }
+    footer{
+        font-size: 20px; 
+        min-height: 54px; 
+    }
+    footer img{
+        height: 40px;
+        width: 40px;
+    }
+
+    .img_header {
+        height: 36px;
+        width: 36px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    main img {
+        height: 120px;
+        width: 120px;
+        margin-right: 24px;
+        margin-bottom: 24px;
+    }
+
+    dialog {
+        height: 360px;
+        width: 340px;
+
+    }
+
+    dialog img {
+        max-height: 240px;
+        max-width: 300px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+
+    }
+    
+    dialog p{
+        font-size: 16px;
+    }
+
+    .arrow_symbol {
+        height: 24px;
+        width: 24px;
+    }
+    .close_symbol{
+        height: 24px;
+        width: 24px;
+    }
+
+    dialog p{
+        font-size: 14px;
+    }
+
+}
+
+
+
+@media(max-width:432px) {
+    header {
+        font-size: 16px;
+        min-height: 48px;
+    }
+    footer{
+        font-size: 16px;
+        min-height: 48px;  
+    }
+    footer img{
+        height: 40px;
+        width: 40px;
+    }
+
+    .img_header {
+        height: 28px;
+        width: 28px;
+    }
+
+    h1 {
+        font-size: 14px;
+        margin-top: 28px;
+    }
+
+    main img {
+        height: 120px;
+        width: 120px;
+        margin-right: 24px;
+        margin-bottom: 24px;
+    }
+    .picture_container{
+        margin-top: 32px;
+    }
+
+    dialog {
+        height: 300px;
+        width: 280px;
+
+    }
+
+    dialog img {
+        max-height: 216px;
+        max-width: 300px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+        
+
+    }
+    
+    dialog p{
+        font-size: 16px;
+    }
+
+    .arrow_symbol {
+        height: 24px;
+        width: 24px;
+    }
+    .close_symbol{
+        height: 24px;
+        width: 24px;
+    }
+
+    dialog p{
+        font-size: 14px;
+    }
+    .slide_number{
+        font-size: 12px;
+    }
 }
