@@ -1,14 +1,18 @@
+/* Grundlegende Styles */
 body {
     font-family: 'Inter', Arial, sans-serif;
     margin: 0px;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    color: white;
-
-
+    color: white;   
 }
 
+h1 {
+    margin-top: 48px;
+}
+
+/* Header */
 header {
     font-family: 'Poppins', sans-serif;
     display: flex;
@@ -35,10 +39,7 @@ header {
     margin-right: 8px;
 }
 
-h1 {
-    margin-top: 48px;
-}
-
+/* Hauptinhault */
 main {
     flex: 1;
     display: flex;
@@ -64,7 +65,15 @@ main img:hover {
     cursor: pointer;
 }
 
+.picture_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 56px;
+    max-width: 1440px;
+}
 
+/* Footer */
 footer {
     font-family: 'Poppins', sans-serif;
     display: flex;
@@ -82,15 +91,7 @@ footer img {
     width: 60px;
     margin-right: 8px;
 }
-
-.picture_container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 56px;
-    max-width: 1440px;
-}
-
+/* Dialogfenster */
 dialog {
     background-color: #0a5c75;
     height: 560px;
@@ -353,9 +354,9 @@ dialog p {
     }
     
     dialog p{
-        font-size: 16px;
+    font-size: 16px;
     }
-
+    
     .arrow_symbol {
         height: 24px;
         width: 24px;
