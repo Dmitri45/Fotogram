@@ -10,7 +10,7 @@ let list_picture = [
 function showImage() {
     let refList = document.getElementById('picture')
     for (let index = 0; index < list_picture.length; index++) {
-        refList.innerHTML += `<img src="./foto/${list_picture[index]}" onclick='openDialog(event)'>`;
+        refList.innerHTML += `<img src="./foto/${list_picture[index]}" alt= "${list_picture[index]}" onclick='openDialog(event)'>`;
 
     }
 }
